@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Tuition | Private Academy</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+
+        .btn {
+            padding: 12px 35px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); }
+
+        /* Sections */
+        section { padding: 80px 10%; }
+        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary-color); }
+
+        /* Subject Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        /* Testimonials */
+        .testimonials { background: var(--primary-color); color: white; }
+        .testimonials h2 { color: white; }
+        .t-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .t-card { font-style: italic; background: rgba(255,255,255,0.1); padding: 20px; border-left: 5px solid var(--accent-color); }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: #bbb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .t-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Private Academy</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Unlock Your Potential</h1>
+        <p>Expert 1-on-1 private tutoring for Primary and Secondary students. Specializing in Mathematics, Science, and All High School Subjects.</p>
+        <a href="#contact" class="btn">Book a Session</a>
+    </header>
+
+    <section id="about">
+        <h2>About the Tutor</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>I am a passionate educator focused on making complex subjects easy to understand. My teaching philosophy centers on building a strong foundation and boosting student confidence through personalized exercises and clear explanations.</p>
+        </div>
+    </section>
+
+    <section id="subjects" style="background: #f4f4f4;">
+        <h2>What We Teach</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Mathematics</h3>
+                <p>Focusing on algebra, geometry, and calculus for exam preparation.</p>
+            </div>
+            <div class="card">
+                <h3>English</h3>
+                <p>Improving students writing and vocabulary skills.</p>
+            </div>
+            <div class="card">
+                <h3>Science</h3>
+                <p>Core concepts in Physics and Chemistry for high school levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Student Success Stories</h2>
+        <div class="t-grid">
+            <div class="t-card">
+                <p>"My grades improved from a C to an A in just one semester. The lessons are very clear!"</p>
+                <p style="margin-top:10px; font-weight: bold;">- Aniq.</p>
+            </div>
+            <div class="t-card">
+                <p>"The best tutor for Mathematics. I finally master the basic of algebra!"</p>
+                <p style="margin-top:10px; font-weight: bold;">- Humaidi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-box">
+            <p>Have questions about rates or scheduling? Reach out via WhatsApp or Email.</p>
+            <br>
+            <p><strong>WhatsApp:</strong> +60 16-657-0203</p>
+            <p><strong>Email:</strong> jzaronizam@gmail.com</p>
+            <p><strong>Coverage:</strong> Cheras & Online</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Private Academy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
